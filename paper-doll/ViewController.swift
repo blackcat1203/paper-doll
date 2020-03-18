@@ -21,35 +21,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func headButton(_ sender: UIButton) {
-        changeHead(to: sender.currentTitle!)
+        changeImage(headImage, imageName:sender.currentTitle!)
     }
     
     @IBAction func poseButton(_ sender: UIButton) {
-        changePose(to: sender.currentTitle!)
+        changeImage(poseImage, imageName:sender.currentTitle!)
     }
     
     @IBAction func faceButton(_ sender: UIButton) {
-        changeFace(to: sender.currentTitle!)
+        changeImage(faceImage, imageName:sender.currentTitle!)
     }
     
     @IBAction func accessoriesButton(_ sender: UIButton) {
-        changeAccessories(to: sender.currentTitle!)
+        changeImage(accessoriesImage, imageName:sender.currentTitle!)
     }
     
-    func changeHead(to head:String){
-        headImage.image = UIImage(named:head)
-    }
-    
-    func changePose(to pose:String){
-        poseImage.image = UIImage(named:pose)
-    }
-    
-    func changeFace(to face:String){
-        faceImage.image = UIImage(named:face)
-    }
-    
-    func changeAccessories(to accessories:String){
-        accessoriesImage.image = UIImage(named:accessories)
+    func changeImage(_ part:UIImageView , imageName:String){
+        part.image = UIImage(named:imageName)
     }
 }
 
